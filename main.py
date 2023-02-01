@@ -23,9 +23,11 @@ def main():
         # Print resource report is user enters "report"
         elif response == "report":
             print_resources()
-        # Else, make some coffee
+        # Else, make some coffee. Set "off" to True if anything
+        # goes wrong with making the coffee. Otherwise
+        # continuing making another coffee drink.
         else:
-            make_coffee(response)
+            off = make_coffee(response)
 
 
 # Check if there are the necessary number of ingredients
@@ -104,10 +106,11 @@ def make_coffee(drink):
             calculate_change(drink, total_of_coins_inserted)
             update_resources(drink)
             print(f"Here is your {drink}. Enjoy")
+            return False
         else:
-            off = True
+            return True
     else:
-        off = True
+        return True
 
 
 if __name__ == "__main__":
