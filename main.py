@@ -23,6 +23,7 @@ def main():
         # Print resource report is user enters "report"
         elif response == "report":
             print_resources()
+        # Else, make some coffee
         else:
             make_coffee(response)
 
