@@ -31,3 +31,10 @@ resources = {
     "money": 0.00
 }
 
+coins = {
+        "quarters": {"num": 0, "value": 0},
+        "dimes": {"num": 0, "value": 0},
+        "nickles": {"num": 0, "value": 0},
+        "pennies": {"num": 0, "value": 0},
+}
+
